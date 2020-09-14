@@ -15,7 +15,7 @@ We'll be using the web browser as a basic introduction to JavaScript but later w
 
 What you should see is something like this:
 
-![Chrome JavaScript Console Screenshot](./images/chrome-js-console.png)
+![Chrome JavaScript Console Screenshot](./images/1-chrome-js-console.png)
 
 The term `console` refers to the `JavaScript` console. As you can likely tell, you can actually type commands in here.
 
@@ -64,12 +64,14 @@ This is cool but it doesn't give us the full feature set that JavaScript provide
 
 Go to [nodejs.org](https://nodejs.org/en/download/), find the system you want to use, and download the latest LTS version of node.js
 
+![Select LTS Version](./images/1-select-nodejs-lts-version.png)
+
+
 > **LTS** is a common term in software; it means Long Term Support. LTS versions receive updates (or patches) to the code much longer than non-LTS versions. I think every beginner should go LTS all the time. 
 
 As of September 2020, the current LTS version of Node.js is `12.18.3` The main number, as it relates to `node.js` you need to consider is `12` and pay less attention to `18.3` since `version 12` is the LTS regardless of the proceeding numbers.
 
-Okay. Have you downloaded `Node.js` yet?
-
+Okay. Have you downloaded `Node.js` yet? I think the install is pretty straightforward. If you're having trouble feel free to submit an issue [here](https://github.com/codingforentrepreneurs/30-Days-of-JavaScript/issues).
 
 So what is `Node.js` exactly? 
 
@@ -83,7 +85,7 @@ Put simply, it allows us to run JavaScript on our local machine and with it we c
 - Build apps that control robots
 - Build apps that control rockets
 - Build apps that create animations
-- Build apps that build apps that create animtaions
+- Build apps that build apps that create animations
 
 In other words, `Node.js` allows us to unlock the potential of writing code with `JavaScript`. 
 
@@ -104,6 +106,11 @@ So let's build a incredibly simple project.
 
 `Terminal` (or `PowerShell`) is one of the many ways to write commands for your computer to do things. In our case, we need it to do things related to `Node.js`. If you haven't ever used a command line, this will be pretty uncomfortable at first but over time you'll get the hang of it.
 
+Here's a screen shot of my terminal:
+
+![Terminal Default Screenshot](./images/1-terminal-default-screenshot.png)
+*My terminal has been customized a lot. You can do this too but it's outside the scope of what we have here.*
+
 First command, let's verify that node.js was installed correctly. What you see below is what you should type and press enter in your command line (ie `Terminal` for mac/linux users and `PowerShell` for windows users).
 
 ```shell
@@ -116,23 +123,137 @@ v12.18.3
 
 Also note that, in the above case, `node -v` is the command and after you hit `enter`/`return` - `v12.18.3` is the response from that command.
 
+Here's a screenshot of my results actual results:
+
+![My Node.js Version Screenshot](./images/1-my-node-version.png)
+*Notice that my version is actually `12.14.1`? Yeah I can probably upgrade but it is the same LTS I told you to download earlier so I should be good to continue (in fact I will).*
+
 
 ### 2. Navigation & Making Directories
 
 Every time you open up `Terminal` or `PowerShell` you are in the root of your users' primary system folder. You can the exact location of where you are by the following commands:
 
+
+#### Listing Items in a Directory
 **Mac/Linux**
 ```
 % pwd
+% ls
 ```
+- `pwd` -- gives you the path to the current location
+- `ls` -- list out all files and folders in current location (try `ls -al` for more details)
+
+![Console ls Screenshot](./images/1-ls-terminal.png)
+*Windows looks only slightly different but overall the results are the same*
 
 **PowerShell**
 ```
 > dir
 ```
+*This command in windows does 2 things: lists everything in the current directory and shows the path to the current directory*
 
-> There are many commands like this you'll learn over time and usage. I'll be sure to write the system differences as they come up. When in doubt, you can try the command. If you see a `command not found` error or a `Unknown command` then you know that particular command either doesn't work on that system  
+> From here on out, most of the commands will be 100% indentical between Mac, Linux, and Windows. That's because we'll be using `node.js` for so much of the work.
+
+#### Changing Directories
+
+```
+% cd Desktop
+```
+Now you're in the desktop folder.
+
+```
+% cd ../
+```
+Now you're back to the root of your project.
+
+#### Make a `Dev` Directory for your projects
+
+**Change to users' root**
+```
+% cd ~/
+```
+This should move you back to your root user folder (ie the location where your `Terminal` / `PowerShell` opens by default)
+
+**Make a directory with the name `Dev`**
+```
+% mkdir Dev
+```
+Easy enough right?  Let's move into that directory now:
+
+```
+% cd Dev
+```
+
+Let's make another:
+```
+% mkdir 30DaysOfJS
+% cd 30DaysOfJS
+% ls
+```
+> Reminder, use `dir` instead of `ls` on Windows.
+
+![Creation Screenshot](./images/1-30-days-dev-folder.png)
+*Windows looks only slightly different but overall the results are the same.*
 
 
-### 3. `npm init`
-> Section coming soon.
+### 3. Start our project 
+
+After you install `node.js` you get two new commands for your command line. They are:
+
+- `node` -- We'll use this to run our `JavaScript` files much like we run `JavaScript` code in the browser above.
+- `npm` -- This is the "node package manager" command. It's great for installing third-party packages (aka `SEC`) as well as creating new projects.
+
+Let's verify verions here:
+
+```
+% node -v
+v12.14.1
+% npm -v 
+6.14.8
+```
+
+No errors? Cool. Now let's create our project:
+
+Change into our project path:
+```
+% cd ~/Dev/30DaysOfJS
+```
+> The command `~/Dev/30DaysOfJS` is the relative path to our project folder from our users' root. The absolute path is different for all systems which is why `~/` is so handy. The aboslute path on my system is `/Users/jmitch/Dev/30DaysOfJS`. 
+
+> Windows users, your paths are more like `~\Dev\30DaysOfJS` and `C:\Users\jmitch\Dev\30DaysOfJS`
+
+
+#### Run `npm init`:
+```
+npm init
+```
+This command creates your first project. You can accept all defaults (just hit `enter` / `return` a few times) like the following:
+
+![Npm Init Screenshot](./images/1-npm-init.png)
+
+
+
+### 4. Hello World
+
+Let's navigate to our project
+```
+% cd ~/Dev/30DaysOfJS
+```
+
+Let's use the `echo` command to add code into a file for us:
+```
+echo "console.log(\"hello world\")" > "hello.js"
+```
+> This is just a quick & easy way to add the code `console.log("hello world")` to a file named `hello.js`. Writing code using `echo` is not ideal. We'll setup something called a `Text Editor` later in this book.
+
+Now, let's run it:
+
+```
+% node hello.js
+hello world
+````
+
+![Hello World Screenshot](./images/1-hello-world.png)
+
+
+That's it. Congratulations. You've created your first `JavaScript` app. It's not much but it's something. Let's keep going.

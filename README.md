@@ -1,4 +1,4 @@
-# 30-Days-of-JavaScript
+# 30 Days of JavaScript
 For this tutorial, I'll have an accompanying eBook along with videos for each day. The whole series is:
 
 **Coming Soon**

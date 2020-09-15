@@ -17,6 +17,10 @@ A quick reminder on how this is done:
 % ls
 package.json
 ```
+Here's what the `Day 2` folder will look like after you finish this chapter.
+
+![Day 2 Final Files screenshot](./images/2-final-files.png)
+
 
 ## 1. Numbers
 Create a new file called `someMath.js` and enter in the following:

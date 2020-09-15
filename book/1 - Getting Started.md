@@ -255,5 +255,67 @@ hello world
 
 ![Hello World Screenshot](./images/1-hello-world.png)
 
+That's it. Congratulations. You've created your first `JavaScript` app. It's not much but it's something. 
 
-That's it. Congratulations. You've created your first `JavaScript` app. It's not much but it's something. Let's keep going.
+Now let's pick an editor for writing our code.
+
+
+## 4. Selecting an Code Editor
+
+*[vim](https://www.vim.org/) is better than that garbage editor you use.*
+
+*Have you ever heard this line?* Well, if you're new to software development, you will eventually.
+
+Many hardcore programmers love [vim](https://www.vim.org/) but personally, I do not. It's fine but it's just not for me. Hardcore programmers also love to challenge the editor you use. I do not. Use whatever you like and switch until you find what you like. 
+
+Personally, I like my editor as much as my current laptop -- it's great for now but I'm always ready for the next performance bump.
+
+### 1. Overview
+
+In 2020, I think the hands-down best option is [VSCode](https://code.visualstudio.com/). 
+
+In 2020, you can write serious JavaScript use TextEdit or Notepad in Mac or Windows respectively.
+
+The reason you'd use something like [VSCode](https://code.visualstudio.com/) is to improve the speed at which you can create programs in the language of your choice. 
+
+Here's a few options for cross-platform code editors that come to mind:
+
+- [VSCode](https://code.visualstudio.com/) -- my current default
+- [Sublime Text](https://www.sublimetext.com/) -- my old default 
+- [Atom](https://atom.io/) -- A bit like VSCode just less features by default
+- [PyCharm](https://www.jetbrains.com/pycharm/) -- a not-free editor that some people love
+- [Komodo Edit](https://www.activestate.com/products/komodo-ide/downloads/) -- my default choice back in 2013
+- [XCode](https://developer.apple.com/xcode/) -- if you're on a mac and you want something that's not really for JavaScript.
+
+> Do you want to add to this list? Please submit a pull request.
+
+So there you have it, download a code editor because it's going to help you a lot in this book.
+
+### 2. Setting up your project in VSCode
+
+1. Download VSCode [here](https://code.visualstudio.com/Download)
+
+2. Open [VSCode], it will look something like:
+
+![VSCode workspace screenshot](./images/1-vscode.png)
+
+3. Go to `File` > `Add folder to workspace` -- select your project we created in step 3 (above).
+
+4. Go to `File` > `Save workspace` -- save your VSCode workspace file in the same folder as your project created in step 4.
+
+5. In the sidebar, toggle the file icon (seen below). If you see the word `Explorer` that means you have access to each one of your workspace project files. Play around with this a bit as it's the primary way you'll navigate.
+
+![VSCode Explorer](./images/1-vscode-explorer.png)
+
+
+6. Now open up the terminal within VSCode. There's two ways to do it:
+
+- Press `~` & `control` (mac/windows)
+- Top menu -> `Terminal` > `New Terminal`
+
+This opens the terminal within VSCode. This is nice because then we don't have to switch between programs. It looks like this:
+
+![VSCode Terminal Screenshot](./images/1-vscode-terminal.png)
+
+> I can write a whole book on how to use and optimize VSCode but these few features are the main things you'll be using in this book. If you're struggling to really get going with VSCode there are a *lot* of great YouTube videos going through it all.
+

@@ -7,15 +7,26 @@ Computers are great at doing math... or, ahem, computation. So that's where we'l
 ## 0. Optional Package configuration
 For each chapter, I'll be creating a brand new package -- this is to make each chapter's code as self-contained as possible. You do not have to do this.
 
+A quick reminder on how this is done:
+
+```shell
+% cd local/path/to/30daysofjs
+% mkdir "Day 2"
+% cd "Day 2"
+% npm init # accept the defaults
+% ls
+package.json
+```
+
 ## 1. Numbers
 Create a new file called `someMath.js` and enter in the following:
 
-```
+```javascript
 console.log(4 + 1)
 ```
 Save that file, open up terminal (either in VSCode or on your system) and run:
 
-```javascript
+```shell
 node someMath
 ```
 What do you see? It's my hope that the result did not surprise you in the least bit. So let's try some multiplication:
@@ -81,9 +92,10 @@ There's also a few built-in features to JavaScript for math.
 
 ### Modulo (x `%` y)
 Modulo `%` is  a remainder operator which means it finds the left over bits of a division.
-```
-5 % 4
+
 ```javascript
+5 % 4
+```
 4 goes into 5 1 time with 1 leftover.
 
 or 
@@ -103,7 +115,7 @@ or
 ```
 98 goes into 99 0 times with 98 left over.
 
-Modulo basically gives us the remainder. 
+Modulo gives us the remainder from dividing two numbers. 
 
 ### `Math.ceil` 
 This rounds up decimal number to the nearest whole number.
@@ -260,3 +272,9 @@ myFunc()
 
 As you see, `const xyz` is declared twice (once within a function) but it's never actually reassigned a value. 
 
+
+## 3. Strings
+
+Let's create a new file called `someStrings.js`
+
+Coming soon...

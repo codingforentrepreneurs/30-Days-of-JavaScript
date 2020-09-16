@@ -279,6 +279,139 @@ As you see, `const xyz` is declared twice (once within a function) but it's neve
 
 ## 3. Strings
 
-Let's create a new file called `someStrings.js`
+Let's create a new file called `someStrings.js`.
 
-Coming soon...
+Strings are a data type that you're already incredibly familiar with. Here's an example:
+
+```javascript
+console.log("The speed of light is 186,282 miles per second.")
+```
+
+Strings are created anytime you wrap quotes (double `"`, single `'`) or ticks (\`) around words, letters, numbers and special characters (`!@#$5^&*()_-+=;:`).
+
+Strings are great for moving messages around. Something like this:
+
+```
+"Hello there John Doe, how are you today?"
+```
+Let's replace `John Doe` above with another name. 
+
+```javascript
+const myName = "Justin"
+const myMsg = "Hello there " + myName + ", how are you today?"
+console.log(myMsg)
+```
+How cool is that? You can *add strings* together to make a new message. 
+
+Can you multiply strings?
+
+```javascript
+console.log("this is awesome" * 3)
+```
+
+Unfortunately not. But you can repeat a string like this:
+
+```javascript
+let letsRepeat = "this is awesome"
+console.log(letsRepeat.repeat(3))
+```
+`repeat()` is an example of built-in methods that all strings have. Here are a few others:
+
+
+#### `replace(replaceWhat, replaceWith)`
+Replacing items in a string is pretty common. This is a simple way to do it.
+```javascript
+let letsReplace = "this is awesome".replace("awesome", "amazing")
+console.log(letsReplace)
+```
+
+#### `split()`
+Splitting up a string is also something you'll do from time to time. This turns your string into an `array` which we'll cover later.
+
+```javascript
+let splitUpAString = "Hello world".split(" ")
+console.log(splitUpAString)
+```
+
+
+### Long Strings & Escaping
+
+The examples above do not account for strings that are much longer. Like paragraphs or sets of paragraphs. 
+
+There's a few ways to do this but first let's talk about the concept of `escaping`.
+
+What happens if you want a double quote in a string that's wrapped in a double quote?
+
+Here's an example:
+
+```
+"The office manager said, "I have a need, a need for tweed." The staff looked on without much regard for the manager's antics."
+```
+
+How do we turn this into a valid string in JavaScript?
+
+You might be tempted to say, put a single quote on the outside of this string so it becomes:
+
+```
+'The office manager said, "I have a need, a need for tweed." The staff looked on without much regard for the manager's antics.'
+```
+
+Well, now we have another problem -- the single quote after in `manager's`. 
+
+You overcome this issue with the concept of **escape notation**.
+
+#### Escape Notation
+There are all kinds of values that need to be escaped inside a string. What we saw above was the most common: single quotes (`'`) and double quotes (`"`).
+
+To escape any value, you just need to add `\` in front of it. It's that simple.
+
+```javascript
+console.log('manager\'s')
+```
+
+```javascript
+console.log("The manager said, \"Everything is awesome.\"")
+```
+
+It's not pretty but it's an effective way to still write normal English. Escaping works for a few other elements as well:
+
+- newline (`\n`). Simply add a new line for your string when it renders. Example: `console.log("hello there\nwhen do you start\nfor the day?\n\n\n")` 
+
+- tabs (`\t`). Tab your content in: `console.log("\tDoes this work\n\tYes, I believe it does.\nThanks.")` 
+
+- backlash (`\\`). Naturally, you might need to use a backlash from time to time so you need to escape it as well: `console.log("The website is http:\\\\www.cfe.sh")`
+
+
+This just scratches the surface of what's possible with strings. There is something far more powerful called **string substitution** that we'll talk about in later chapters.
+
+You now understand the basics of how strings work. Remember, strings can be assigned to variables and passed around just like numbers.
+
+Here's the relevant code for this section on strings:
+
+```javascript
+console.log("The speed of light is 186,282 miles per second.")
+
+const myName = "Justin"
+const myMsg = "Hello there " + myName + ", how are you today?"
+console.log(myMsg)
+
+let letsRepeat = "this is awesome"
+console.log(letsRepeat.repeat(3))
+
+let letsReplace = "this is awesome".replace("awesome", "amazing")
+console.log(letsReplace)
+
+let splitUpAString = "Hello world".split(" ")
+console.log(splitUpAString)
+
+
+console.log('manager\'s')
+
+console.log("The manager said, \"Everything is awesome.\"")
+
+console.log("newline (`\\n`)", "hello there\nwhen do you start\nfor the day?\n\n\n")
+
+console.log("tabs (`\\t`)", "\tDoes this work\n\tYes, I believe it does.\nThanks.")
+
+console.log("backlash (`\\\\`)", "The website is http:\\\\www.cfe.sh")
+```
